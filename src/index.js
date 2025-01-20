@@ -53,11 +53,12 @@ function setupCurrentQuestion() {
 
 function checkForAnswer(elem) {
     if (elem.firstElementChild.innerHTML === questionAnswer) {
+        alert("RIGHT ANSWER!");
+        setupCurrentQuestion();
         console.log("DING DING DING!");
     }
     else {
+        alert("Wrong answer sorry! Please try again.");
         console.log("WRONG ANSWERRRR!");
     }
 }
-  
-  

@@ -3,6 +3,7 @@ window.onload = () => {
     colorAnswerItems();
     for (let i = 1; i <= 4; i++) {
        document.getElementById(`answer-${i}`).addEventListener("click", () => {
+        checkForAnswer(document.getElementById(`answer-${i}`));
     })
 }
 }
@@ -47,6 +48,15 @@ function setupCurrentQuestion() {
 
     for (let i = 1; i < 5; i++) {
         document.getElementById(`answer-text-${i}`).innerHTML = currQuestion[i];
+    }
+}
+
+function checkForAnswer(elem) {
+    if (elem.firstElementChild.innerHTML === questionAnswer) {
+        console.log("DING DING DING!");
+    }
+    else {
+        console.log("WRONG ANSWERRRR!");
     }
 }
   

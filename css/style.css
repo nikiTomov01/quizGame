@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
 #question-container {
     background-color: #00ADB5;
     padding: 50px;
+    color: #EEEEEE;
 }
 
 #answers-container {
@@ -21,8 +23,14 @@ body {
 .answer-item {
     width: 700px;
     height: 300px;
+    padding: 10px;
     background-color: blue;
-    border: 10px solid blue;
     border-radius: 20px;
     margin: 40px 0px;
+    transition: 0.45s;
+    font-size: 2rem;
+}
+
+.answer-item:hover {
+    cursor: pointer;
 }
